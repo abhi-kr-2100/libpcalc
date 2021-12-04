@@ -1,0 +1,3 @@
+[submodule "power-calculator"]
+	path = power-calculator
+	url = https://github.com/abhi-kr-2100/power-calculator
