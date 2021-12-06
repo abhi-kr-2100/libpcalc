@@ -1,2 +1,5 @@
 *.o
 *.pyc
+build/
+dist/
+libpcalc.egg-info/
