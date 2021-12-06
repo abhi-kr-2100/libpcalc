@@ -9,6 +9,7 @@ pcalc_extension = Extension(
         'power-calculator/token/token.cpp'
     ],
     include_dirs=['./', './power-calculator'],
+    extra_compile_args=['-std=c++17']
 )
 
 setup(
