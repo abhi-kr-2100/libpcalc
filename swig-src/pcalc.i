@@ -7,6 +7,11 @@
 %include <std_map.i>
 
 
+namespace std {
+    %template(VariablesTableType) map<string, double>;
+}
+
+
 class Parser
 {
 public:
