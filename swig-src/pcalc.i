@@ -21,7 +21,8 @@ public:
         Unknown_token, Bad_number, Runtime_error, Syntax_error);
     
     double evaluate(const std::string& expr,
-        std::map<std::string, double>& variables_table);
+        std::map<std::string, double>& variables_table) throw(
+            Unknown_token, Bad_number, Runtime_error, Syntax_error);
 
     // the keyword used to introduce a new variable
     inline static const std::string var_declaration_key = "let";

@@ -7254,7 +7254,17 @@ SWIGINTERN PyObject *_wrap_Parser_evaluate__SWIG_1(PyObject *SWIGUNUSEDPARM(self
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "Parser_evaluate" "', argument " "3"" of type '" "std::map< std::string,double,std::less< std::string >,std::allocator< std::pair< std::string const,double > > > &""'"); 
   }
   arg3 = reinterpret_cast< std::map< std::string,double,std::less< std::string >,std::allocator< std::pair< std::string const,double > > > * >(argp3);
-  result = (double)(arg1)->evaluate((std::string const &)*arg2,*arg3);
+  try {
+    result = (double)(arg1)->evaluate((std::string const &)*arg2,*arg3);
+  } catch(Unknown_token &_e) {
+    SWIG_Python_Raise(SWIG_NewPointerObj((new Unknown_token(static_cast< const Unknown_token& >(_e))),SWIGTYPE_p_Unknown_token,SWIG_POINTER_OWN), "Unknown_token", SWIGTYPE_p_Unknown_token); SWIG_fail;
+  } catch(Bad_number &_e) {
+    SWIG_Python_Raise(SWIG_NewPointerObj((new Bad_number(static_cast< const Bad_number& >(_e))),SWIGTYPE_p_Bad_number,SWIG_POINTER_OWN), "Bad_number", SWIGTYPE_p_Bad_number); SWIG_fail;
+  } catch(Runtime_error &_e) {
+    SWIG_Python_Raise(SWIG_NewPointerObj((new Runtime_error(static_cast< const Runtime_error& >(_e))),SWIGTYPE_p_Runtime_error,SWIG_POINTER_OWN), "Runtime_error", SWIGTYPE_p_Runtime_error); SWIG_fail;
+  } catch(Syntax_error &_e) {
+    SWIG_Python_Raise(SWIG_NewPointerObj((new Syntax_error(static_cast< const Syntax_error& >(_e))),SWIGTYPE_p_Syntax_error,SWIG_POINTER_OWN), "Syntax_error", SWIGTYPE_p_Syntax_error); SWIG_fail;
+  }
   resultobj = SWIG_From_double(static_cast< double >(result));
   if (SWIG_IsNewObj(res2)) delete arg2;
   return resultobj;
