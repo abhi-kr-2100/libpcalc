@@ -4,3 +4,4 @@ build/
 dist/
 libpcalc.egg-info/
 .vscode/settings.json
+*.so
