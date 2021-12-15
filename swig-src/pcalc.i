@@ -1,6 +1,8 @@
 %module pcalc
 %{
 #include "power-calculator/parser/parser.hpp"
+#include "power-calculator/token/exceptions.hpp"
+#include "power-calculator/parser/exceptions.hpp"
 %}
 
 %include <std_string.i>
@@ -15,9 +17,8 @@ namespace std {
 class Parser
 {
 public:
-    double evaluate(const std::string& expr) {
-        return evaluate(expr, variables_table);
-    }
+    double evaluate(const std::string& expr) throw(
+        Unknown_token, Bad_number, Runtime_error, Syntax_error);
     
     double evaluate(const std::string& expr,
         std::map<std::string, double>& variables_table);
