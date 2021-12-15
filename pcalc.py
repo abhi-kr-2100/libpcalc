@@ -61,12 +61,73 @@ class _SwigNonDynamicMeta(type):
     __setattr__ = _swig_setattr_nondynamic_class_variable(type.__setattr__)
 
 
+class SwigPyIterator(object):
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+
+    def __init__(self, *args, **kwargs):
+        raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+    __swig_destroy__ = _pcalc.delete_SwigPyIterator
+
+    def value(self) -> "PyObject *":
+        return _pcalc.SwigPyIterator_value(self)
+
+    def incr(self, n: "size_t"=1) -> "swig::SwigPyIterator *":
+        return _pcalc.SwigPyIterator_incr(self, n)
+
+    def decr(self, n: "size_t"=1) -> "swig::SwigPyIterator *":
+        return _pcalc.SwigPyIterator_decr(self, n)
+
+    def distance(self, x: "SwigPyIterator") -> "ptrdiff_t":
+        return _pcalc.SwigPyIterator_distance(self, x)
+
+    def equal(self, x: "SwigPyIterator") -> "bool":
+        return _pcalc.SwigPyIterator_equal(self, x)
+
+    def copy(self) -> "swig::SwigPyIterator *":
+        return _pcalc.SwigPyIterator_copy(self)
+
+    def next(self) -> "PyObject *":
+        return _pcalc.SwigPyIterator_next(self)
+
+    def __next__(self) -> "PyObject *":
+        return _pcalc.SwigPyIterator___next__(self)
+
+    def previous(self) -> "PyObject *":
+        return _pcalc.SwigPyIterator_previous(self)
+
+    def advance(self, n: "ptrdiff_t") -> "swig::SwigPyIterator *":
+        return _pcalc.SwigPyIterator_advance(self, n)
+
+    def __eq__(self, x: "SwigPyIterator") -> "bool":
+        return _pcalc.SwigPyIterator___eq__(self, x)
+
+    def __ne__(self, x: "SwigPyIterator") -> "bool":
+        return _pcalc.SwigPyIterator___ne__(self, x)
+
+    def __iadd__(self, n: "ptrdiff_t") -> "swig::SwigPyIterator &":
+        return _pcalc.SwigPyIterator___iadd__(self, n)
+
+    def __isub__(self, n: "ptrdiff_t") -> "swig::SwigPyIterator &":
+        return _pcalc.SwigPyIterator___isub__(self, n)
+
+    def __add__(self, n: "ptrdiff_t") -> "swig::SwigPyIterator *":
+        return _pcalc.SwigPyIterator___add__(self, n)
+
+    def __sub__(self, *args) -> "ptrdiff_t":
+        return _pcalc.SwigPyIterator___sub__(self, *args)
+    def __iter__(self):
+        return self
+
+# Register SwigPyIterator in _pcalc:
+_pcalc.SwigPyIterator_swigregister(SwigPyIterator)
+
 class Parser(object):
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
     __repr__ = _swig_repr
 
-    def evaluate(self, expr: "std::string const &") -> "double":
-        return _pcalc.Parser_evaluate(self, expr)
+    def evaluate(self, *args) -> "double":
+        return _pcalc.Parser_evaluate(self, *args)
     var_declaration_key = _pcalc.Parser_var_declaration_key
 
     def __init__(self):
