@@ -122,6 +122,114 @@ class SwigPyIterator(object):
 # Register SwigPyIterator in _pcalc:
 _pcalc.SwigPyIterator_swigregister(SwigPyIterator)
 
+class VariablesTableType(object):
+    thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
+    __repr__ = _swig_repr
+
+    def iterator(self) -> "swig::SwigPyIterator *":
+        return _pcalc.VariablesTableType_iterator(self)
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self) -> "bool":
+        return _pcalc.VariablesTableType___nonzero__(self)
+
+    def __bool__(self) -> "bool":
+        return _pcalc.VariablesTableType___bool__(self)
+
+    def __len__(self) -> "std::map< std::string,double >::size_type":
+        return _pcalc.VariablesTableType___len__(self)
+    def __iter__(self):
+        return self.key_iterator()
+    def iterkeys(self):
+        return self.key_iterator()
+    def itervalues(self):
+        return self.value_iterator()
+    def iteritems(self):
+        return self.iterator()
+
+    def __getitem__(self, key: "std::map< std::string,double >::key_type const &") -> "std::map< std::string,double >::mapped_type const &":
+        return _pcalc.VariablesTableType___getitem__(self, key)
+
+    def __delitem__(self, key: "std::map< std::string,double >::key_type const &") -> "void":
+        return _pcalc.VariablesTableType___delitem__(self, key)
+
+    def has_key(self, key: "std::map< std::string,double >::key_type const &") -> "bool":
+        return _pcalc.VariablesTableType_has_key(self, key)
+
+    def keys(self) -> "PyObject *":
+        return _pcalc.VariablesTableType_keys(self)
+
+    def values(self) -> "PyObject *":
+        return _pcalc.VariablesTableType_values(self)
+
+    def items(self) -> "PyObject *":
+        return _pcalc.VariablesTableType_items(self)
+
+    def __contains__(self, key: "std::map< std::string,double >::key_type const &") -> "bool":
+        return _pcalc.VariablesTableType___contains__(self, key)
+
+    def key_iterator(self) -> "swig::SwigPyIterator *":
+        return _pcalc.VariablesTableType_key_iterator(self)
+
+    def value_iterator(self) -> "swig::SwigPyIterator *":
+        return _pcalc.VariablesTableType_value_iterator(self)
+
+    def __setitem__(self, *args) -> "void":
+        return _pcalc.VariablesTableType___setitem__(self, *args)
+
+    def asdict(self) -> "PyObject *":
+        return _pcalc.VariablesTableType_asdict(self)
+
+    def __init__(self, *args):
+        _pcalc.VariablesTableType_swiginit(self, _pcalc.new_VariablesTableType(*args))
+
+    def empty(self) -> "bool":
+        return _pcalc.VariablesTableType_empty(self)
+
+    def size(self) -> "std::map< std::string,double >::size_type":
+        return _pcalc.VariablesTableType_size(self)
+
+    def swap(self, v: "VariablesTableType") -> "void":
+        return _pcalc.VariablesTableType_swap(self, v)
+
+    def begin(self) -> "std::map< std::string,double >::iterator":
+        return _pcalc.VariablesTableType_begin(self)
+
+    def end(self) -> "std::map< std::string,double >::iterator":
+        return _pcalc.VariablesTableType_end(self)
+
+    def rbegin(self) -> "std::map< std::string,double >::reverse_iterator":
+        return _pcalc.VariablesTableType_rbegin(self)
+
+    def rend(self) -> "std::map< std::string,double >::reverse_iterator":
+        return _pcalc.VariablesTableType_rend(self)
+
+    def clear(self) -> "void":
+        return _pcalc.VariablesTableType_clear(self)
+
+    def get_allocator(self) -> "std::map< std::string,double >::allocator_type":
+        return _pcalc.VariablesTableType_get_allocator(self)
+
+    def count(self, x: "std::map< std::string,double >::key_type const &") -> "std::map< std::string,double >::size_type":
+        return _pcalc.VariablesTableType_count(self, x)
+
+    def erase(self, *args) -> "void":
+        return _pcalc.VariablesTableType_erase(self, *args)
+
+    def find(self, x: "std::map< std::string,double >::key_type const &") -> "std::map< std::string,double >::iterator":
+        return _pcalc.VariablesTableType_find(self, x)
+
+    def lower_bound(self, x: "std::map< std::string,double >::key_type const &") -> "std::map< std::string,double >::iterator":
+        return _pcalc.VariablesTableType_lower_bound(self, x)
+
+    def upper_bound(self, x: "std::map< std::string,double >::key_type const &") -> "std::map< std::string,double >::iterator":
+        return _pcalc.VariablesTableType_upper_bound(self, x)
+    __swig_destroy__ = _pcalc.delete_VariablesTableType
+
+# Register VariablesTableType in _pcalc:
+_pcalc.VariablesTableType_swigregister(VariablesTableType)
+
 class Parser(object):
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
     __repr__ = _swig_repr
