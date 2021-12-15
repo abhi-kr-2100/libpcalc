@@ -14,7 +14,7 @@ pcalc_extension = Extension(
 
 setup(
     name='libpcalc',
-    version='1.0.0',
+    version='1.1.0',
     
     description='Evaluate Power Calculator expressions from Python',
     long_description=open('README.md').read(),
